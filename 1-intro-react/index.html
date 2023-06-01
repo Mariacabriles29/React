@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Cargat React
+    agrego librerias para usar React con javaScript
+     babel se encarga de hacer la traduccion de un codigo moderno a lo que es un codigo soportado por un navegador web-->
+     <!-- babel -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactApp</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const nombre= 'Maria';
+        const divRoot=document.querySelector('#root');
+        //aqui dentro de las llave le paso el nombre de la variable y react se encarga de reemplazar 
+        //el nombre por el valor que tiene la variable 
+        const h1Tag = <h1>Hola, soy {nombre}  </h1>;
+
+        //ahora aqui se le indica a rect que renderize el root
+        ReactDOM.render(h1Tag,divRoot);
+        
+    </script>
+    
+</body>
+</html>
